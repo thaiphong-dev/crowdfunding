@@ -9,9 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
+        'login': "url('/image/Background.png')",
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        
+      },
+      colors: {
+        'primary-1': '#77D7D3',
+        'primary-2': '#FF6D6D',
+        'primary-3': '#2E4049',
+        'primary-4': '#F1EEEC',
+        'primary-5': '#ECF1F0',
+        'primary-6': '#F2F2F2',
+        'primary-7': '#727272',
+        'primary-def': '#E6E6E6',
       },
     },
   },
