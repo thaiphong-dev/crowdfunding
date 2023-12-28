@@ -1,16 +1,26 @@
+"use client";
 import React from "react";
 import LoginForm from "./loginForm";
 import { Sue_Ellen_Francisco } from "next/font/google";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 const sue_Ellen_Francisco = Sue_Ellen_Francisco({
   weight: "400",
   subsets: ["latin"],
 });
 export default function Index() {
+  const router = useRouter();
   return (
     <div className="h-[100vh] bg-login flex-col items-center justify-center">
-      <div className="pt-6 flex items-center justify-center">
-        <Image src="/image/logo.png" alt="giving" width={100} height={0} />
+      <div className="pt-2 flex items-center justify-center">
+        <Image
+          onClick={() => router.push("/")}
+          className="cursor-pointer"
+          src="/image/logo1.png"
+          alt="giving"
+          width={200}
+          height={0}
+        />
         <p></p>
       </div>
       <div className="h-[90%] flex items-center justify-center">
