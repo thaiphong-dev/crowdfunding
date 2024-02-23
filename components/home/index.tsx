@@ -1,10 +1,12 @@
 import React from "react";
 import Header from "../common/header";
+import Banner from "./banner";
+import CommonContentBlock from "./commonContentBlock";
 export default function HomePage() {
   return (
-    <div>
+    <div className="relative">
       <Header />
-      home
+      <Banner />
     </div>
   );
 }

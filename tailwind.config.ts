@@ -25,6 +25,10 @@ const config: Config = {
         'primary-7': '#727272',
         'primary-def': '#E6E6E6',
       },
+      fontSize: {
+        'banner-sub': '50px',
+        'banner-main': '90px'
+      }
     },
   },
   plugins: [],

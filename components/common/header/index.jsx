@@ -18,7 +18,7 @@ export default function Index() {
   ];
   const router = useRouter();
   return (
-    <div className="flex w-full items-center justify-between px-[15rem] pt-[1rem]">
+    <div className="flex w-full items-center justify-between px-[15rem] pt-[1rem] pb-[15px]">
       <div>
         <Image
           onClick={() => {
