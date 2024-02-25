@@ -15,8 +15,8 @@ const shippori_Mincho = Shippori_Mincho({
 export default function Banner() {
   return (
     <div className="relative">
-      <div className="relative">
-        <div className="absolute top-[20%] left-[20%] w-[754px] text-primary-def">
+      <div className="z-10">
+        <div className="absolute top-[10%] left-[20%] w-[754px] text-primary-def">
           <p className={`${sue_Ellen_Francisco.className} text-banner-sub`}>
             Need help...
           </p>
@@ -36,7 +36,7 @@ export default function Banner() {
         </div>
         <img src="/image/mainBanner.png" alt="mainbanner" />
       </div>
-      <div className="absolute top-[85%] left-[18%]">
+      <div className="mt-[-5%]">
         <CommonContentBlock />
       </div>
     </div>

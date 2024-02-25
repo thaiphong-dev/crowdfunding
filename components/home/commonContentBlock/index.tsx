@@ -1,5 +1,6 @@
 import SingleBlock from "@/components/common/singleBlock";
 import React from "react";
+import AboutUs from "../aboutUs";
 interface DataType {
   title?: string;
   content?: string;
