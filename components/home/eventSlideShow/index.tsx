@@ -50,6 +50,7 @@ export default function EventSwiper() {
           clickable: true,
         }}
         modules={[Pagination]}
+        className="h-[750px]"
       >
         {mockData?.map((x, index) => (
           <SwiperSlide key={index}>
