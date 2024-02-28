@@ -8,10 +8,11 @@ import WhatWeDid from "./whatWeDid";
 import Testimonial from "./testimonial";
 import Team from "./team";
 import OurEvent from "./ourEvent";
+import Footer from "../common/footer";
 
 export default function HomePage() {
   return (
-    <div className="relative">
+    <div className="relative text-primary-3">
       <Header />
       <div className="space-y-[100px]">
         <Banner />
@@ -25,6 +26,7 @@ export default function HomePage() {
           <OurEvent />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

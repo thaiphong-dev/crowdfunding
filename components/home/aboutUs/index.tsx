@@ -33,7 +33,7 @@ export default function AboutUs() {
   ];
   return (
     <div className="w-[1200px] h-[450px] flex justify-center space-x-[30px]">
-      <div className="w-[850px] space-y-[15px]">
+      <div className="w-[850px] space-y-[15px] ">
         <p
           className={`${sue_Ellen_Francisco.className} text-[35px] leading-9 text-primary-2`}
         >

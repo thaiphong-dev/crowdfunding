@@ -23,6 +23,7 @@ const config: Config = {
         'primary-5': '#ECF1F0',
         'primary-6': '#F2F2F2',
         'primary-7': '#727272',
+        'primary-8': '#384C56',
         'primary-def': '#E6E6E6',
       },
       fontSize: {

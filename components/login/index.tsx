@@ -16,7 +16,7 @@ export default function Index() {
         <Image
           onClick={() => router.push("/")}
           className="cursor-pointer"
-          src="/image/logo1.png"
+          src="/image/logo.png"
           alt="giving"
           width={200}
           height={0}

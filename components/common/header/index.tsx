@@ -2,8 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { Shippori_Mincho } from "next/font/google";
 import React from "react";
-
+const shippori_Mincho = Shippori_Mincho({
+  weight: "600",
+  subsets: ["latin"],
+});
 export default function Index() {
   const menuList = [
     { label: "Home", link: "/home" },
@@ -32,11 +36,13 @@ export default function Index() {
         />
       </div>
       <div>
-        <ul className="flex items-center justify-between space-x-[2rem]">
+        <ul
+          className={`${shippori_Mincho.className} flex items-center justify-between space-x-[2rem]`}
+        >
           {menuList.map((item, index) => {
             return (
               <li
-                className="cursor-pointer text-[1.1rem] text-primary-7 hover:text-primary-2 hover:font-bold"
+                className="cursor-pointer text-[20px] text-primary-7 hover:text-primary-2 hover:font-bold"
                 key={index}
               >
                 <Link href={item.link}>{item.label}</Link>
@@ -45,17 +51,17 @@ export default function Index() {
           })}
         </ul>
       </div>
-      <div className="cursor-pointer">
+      <div className={`${shippori_Mincho.className} cursor-pointer`}>
         <Link
           href="/login"
-          className="text-[1.1rem] text-primary-7 hover:text-primary-2 "
+          className="text-[18px] text-primary-7 hover:text-primary-2 "
         >
           Login
         </Link>
         /
         <Link
           href="/register"
-          className="text-[1.1rem] text-primary-7 hover:text-primary-2 "
+          className="text-[18px] text-primary-7 hover:text-primary-2 "
         >
           Register
         </Link>

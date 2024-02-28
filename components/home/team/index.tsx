@@ -2,6 +2,7 @@ import Profilecard from "@/components/common/profileCard";
 import React from "react";
 import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 const sue_Ellen_Francisco = Sue_Ellen_Francisco({
   weight: "400",
   subsets: ["latin"],
@@ -60,7 +61,12 @@ export default function Team() {
               Centuries but also the leap electtypesetting, remaining
             </p>
             <button className="bg-primary-3 text-white uppercase w-[200px] h-[65px] rounded-[34px]">
-              Join Us Today
+              <Link
+                className="uppercase mt-[10px] no-underline"
+                href="/register"
+              >
+                Join Us Today
+              </Link>
             </button>
           </div>
         </div>
