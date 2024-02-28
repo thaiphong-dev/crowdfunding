@@ -6,6 +6,8 @@ import OurCauses from "./ourCauses";
 import WhatWeDo from "./whatWeDo";
 import WhatWeDid from "./whatWeDid";
 import Testimonial from "./testimonial";
+import Team from "./team";
+import OurEvent from "./ourEvent";
 
 export default function HomePage() {
   return (
@@ -19,6 +21,8 @@ export default function HomePage() {
           <WhatWeDo />
           <WhatWeDid />
           <Testimonial />
+          <Team />
+          <OurEvent />
         </div>
       </div>
     </div>
