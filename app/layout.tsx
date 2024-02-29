@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import "swiper/swiper-bundle.css";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const work_Sans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -17,6 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <SpeedInsights />
       <body className={work_Sans.className}>{children}</body>
     </html>
   );
