@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import "swiper/swiper-bundle.css";
+import Header from "@/components/common/header";
+import Footer from "@/components/common/footer";
 const work_Sans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -16,7 +18,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={work_Sans.className}>{children}</body>
+      <body className={work_Sans.className}>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

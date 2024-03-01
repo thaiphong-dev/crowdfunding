@@ -1,9 +1,9 @@
 import React from "react";
-import Login from "../../components/login";
+import Register from "../../../components/register";
 function Page() {
   return (
     <div>
-      <Login />
+      <Register />
     </div>
   );
 }

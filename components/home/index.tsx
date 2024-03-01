@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../common/header";
 import Banner from "./banner";
 import AboutUs from "./aboutUs";
 import OurCauses from "./ourCauses";
@@ -8,12 +7,10 @@ import WhatWeDid from "./whatWeDid";
 import Testimonial from "./testimonial";
 import Team from "./team";
 import OurEvent from "./ourEvent";
-import Footer from "../common/footer";
 
 export default function HomePage() {
   return (
     <div className="relative text-primary-3">
-      <Header />
       <div className="space-y-[100px]">
         <Banner />
         <div className="flex flex-col space-y-[100px] justify-center items-center">
@@ -26,7 +23,6 @@ export default function HomePage() {
           <OurEvent />
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

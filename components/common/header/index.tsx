@@ -10,8 +10,8 @@ const shippori_Mincho = Shippori_Mincho({
 });
 export default function Index() {
   const menuList = [
-    { label: "Home", link: "/home" },
-    { label: "About Us", link: "/about" },
+    { label: "Home", link: "/" },
+    { label: "About Us", link: "/aboutUs" },
     { label: "Guide", link: "/guide" },
     { label: "Event", link: "/event" },
     { label: "Contact", link: "/contact" },
