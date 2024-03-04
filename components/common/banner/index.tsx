@@ -20,7 +20,7 @@ export default function CommonBanner({ subTitle, title, imgURL }: Props) {
   return (
     <div>
       <div className="z-10">
-        <div className="absolute top-[10%] left-[15%] w-[754px] text-primary-def">
+        <div className="absolute top-[5%] left-[15%] w-[754px] text-primary-def">
           <p
             className={`${sue_Ellen_Francisco.className} capitalize text-banner-sub`}
           >
