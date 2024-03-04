@@ -14,13 +14,16 @@ const shippori_Mincho = Shippori_Mincho({
 interface Props {
   subTitle: string;
   title: string;
+  imgURL: string;
 }
-export default function CommonBanner({ subTitle, title }: Props) {
+export default function CommonBanner({ subTitle, title, imgURL }: Props) {
   return (
     <div>
       <div className="z-10">
-        <div className="absolute top-[10%] left-[20%] w-[754px] text-primary-def">
-          <p className={`${sue_Ellen_Francisco.className} text-banner-sub`}>
+        <div className="absolute top-[10%] left-[15%] w-[754px] text-primary-def">
+          <p
+            className={`${sue_Ellen_Francisco.className} capitalize text-banner-sub`}
+          >
             {subTitle}
           </p>
           <p
@@ -29,7 +32,7 @@ export default function CommonBanner({ subTitle, title }: Props) {
             {title}
           </p>
         </div>
-        <img src="/image/mainBanner.png" alt="mainbanner" />
+        <img src={imgURL} alt="mainbanner" />
       </div>
     </div>
   );

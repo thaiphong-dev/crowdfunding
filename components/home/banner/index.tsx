@@ -16,7 +16,7 @@ export default function Banner() {
   return (
     <div className="relative">
       <div className="z-10">
-        <div className="absolute top-[10%] left-[20%] w-[754px] text-primary-def">
+        <div className="absolute top-[10%] left-[15%] w-[754px] text-primary-def">
           <p className={`${sue_Ellen_Francisco.className} text-banner-sub`}>
             Need help...
           </p>
