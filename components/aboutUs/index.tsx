@@ -2,6 +2,8 @@ import React from "react";
 import CommonBanner from "../common/banner";
 import Story from "./story";
 import GoalAndMission from "./goalAndMission";
+import Team from "../common/team";
+import Subcribe from "./subcribe";
 
 export default function AboutUsPage() {
   return (
@@ -19,6 +21,8 @@ export default function AboutUsPage() {
             <GoalAndMission />
           </div>
         </div>
+        <Team />
+        <Subcribe />
       </div>
     </div>
   );

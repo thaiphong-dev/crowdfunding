@@ -5,8 +5,8 @@ import OurCauses from "./ourCauses";
 import WhatWeDo from "./whatWeDo";
 import WhatWeDid from "./whatWeDid";
 import Testimonial from "./testimonial";
-import Team from "./team";
 import OurEvent from "./ourEvent";
+import Team from "../common/team";
 
 export default function HomePage() {
   return (
