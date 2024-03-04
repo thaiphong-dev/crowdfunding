@@ -18,7 +18,7 @@ interface Props {
   goal: Number;
   percent: Number;
 }
-export default function SingleEvent({
+export default function SingleCause({
   imgURL,
   title,
   raised,
@@ -27,17 +27,17 @@ export default function SingleEvent({
 }: Props) {
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <div className="bg-white w-[440px] h-[695px]">
+      <div className="bg-white w-[584] h-[695px]">
         <div className="relative">
-          <Image alt="event img" src={imgURL} width={437} height={387} />
+          <Image alt="event img" src={imgURL} width={584} height={387} />
           <div
             className={`${shippori_Mincho.className} absolute top-[10%] left-[5%] text-[25px] leading-[30px] w-[85px] h-[46px] text-primary-2 bg-white text-center flex justify-center items-center `}
           >
             <p>{`${percent}%`}</p>
           </div>
         </div>
-        <div>
-          <div className="w-[443px] px-[20px] py-[30px]">
+        <div className="flex justify-center item-center">
+          <div className="w-[508px] py-[30px] ">
             <p
               className={`${CustomFont?.shipporiFont?.className} text-[25px] leading-[30px] text-primary-3 `}
             >
@@ -61,9 +61,11 @@ export default function SingleEvent({
                 {`Goal - $${goal} M`}
               </p>
             </div>
-            <button className="uppercase bg-primary-3 text-white font-medium text-[18px] leading-5 w-[145px] h-[65px] rounded-[34px] mt-[50px]">
-              Donate
-            </button>
+            <div className="flex justify-end">
+              <button className="uppercase bg-primary-3 text-white font-medium text-[18px] leading-5 w-[145px] h-[65px] rounded-[34px] mt-[50px]">
+                Donate
+              </button>
+            </div>
           </div>
         </div>
       </div>

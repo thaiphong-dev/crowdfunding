@@ -1,15 +1,8 @@
 import React from "react";
 
-import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
 import CheckIcon from "@/components/common/checkIcon";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
-const shippori_Mincho = Shippori_Mincho({
-  weight: "800",
-  subsets: ["latin"],
-});
+import { CustomFont } from "@/components/common/commonFont";
+
 export default function AboutUs() {
   const checkList = [
     {
@@ -34,11 +27,11 @@ export default function AboutUs() {
   return (
     <div className="w-[1200px] h-[450px] flex justify-center space-x-[30px]">
       <div className="w-[850px] space-y-[15px] ">
-        <p className={`${sue_Ellen_Francisco.className} sectionTitle`}>
+        <p className={`${CustomFont?.sueFont?.className} sectionTitle`}>
           About Us
         </p>
         <p
-          className={`${shippori_Mincho.className} text-[40px] leading-[48px] w-[315px]`}
+          className={`${CustomFont?.shipporiFont?.className} text-[40px] leading-[48px] w-[315px]`}
         >
           Help People, Our Main Goals
         </p>
@@ -72,7 +65,7 @@ export default function AboutUs() {
           </div>
           <div className="w-[443px]">
             <p
-              className={`${shippori_Mincho.className} text-[25px] leading-[30px] `}
+              className={`${CustomFont?.shipporiFont.className} text-[25px] leading-[30px] `}
             >
               Total Donation
             </p>
@@ -81,12 +74,12 @@ export default function AboutUs() {
             </div>
             <div className="flex flex-row justify-between">
               <p
-                className={`${shippori_Mincho.className} text-[20px] leading-[24px] `}
+                className={`${CustomFont?.shipporiFont.className} text-[20px] leading-[24px] `}
               >
                 Collection - $5M
               </p>
               <p
-                className={`${shippori_Mincho.className} text-[20px] leading-[24px] `}
+                className={`${CustomFont?.shipporiFont.className} text-[20px] leading-[24px] `}
               >
                 Goal - $10M
               </p>

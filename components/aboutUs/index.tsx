@@ -21,8 +21,10 @@ export default function AboutUsPage() {
             <GoalAndMission />
           </div>
         </div>
-        <Team />
-        <Subcribe />
+        <div>
+          <Team />
+          <Subcribe />
+        </div>
       </div>
     </div>
   );

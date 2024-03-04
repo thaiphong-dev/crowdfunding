@@ -1,16 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-
-import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
-const shippori_Mincho = Shippori_Mincho({
-  weight: "800",
-  subsets: ["latin"],
-});
+import { CustomFont } from "../commonFont";
 
 interface Props {
   imgURL: string;
@@ -33,7 +24,7 @@ export default function Profilecard({
     <div className="text-center space-y-[20px]">
       <Image alt="profile image" src={imgURL} width={283} height={382} />
       <p
-        className={`${shippori_Mincho.className} text-[20px] leading-[24px] text-primary-3`}
+        className={`${CustomFont?.shipporiFont?.className} text-[20px] leading-[24px] text-primary-3`}
       >
         {name}
       </p>

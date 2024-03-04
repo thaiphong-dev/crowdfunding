@@ -17,8 +17,8 @@ export default function Subcribe() {
   };
   return (
     <div className="text-white relative">
-      <img alt="subcribe.png" src="/image/about/subcriber.png" width="full" />
-      <div className="w-[780px] text-center absolute top-[25%] left-[50%]">
+      <img alt="subcribe.png" src="/image/about/subcriber.png" />
+      <div className="w-[750px] text-center absolute top-[25%] left-[50%]">
         <div className="relative top-[-25%] left-[-50%] flex flex-col justify-center items-center space-y-[20px]">
           <div>
             <p

@@ -1,15 +1,9 @@
 "use client";
-import { Shippori_Mincho } from "next/font/google";
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import ReactPlayer from "react-player";
 import VideoPlayer from "../videoPlayer";
+import { CustomFont } from "../commonFont";
 
-const shippori_Mincho = Shippori_Mincho({
-  weight: "800",
-  subsets: ["latin"],
-});
 interface Props {
   title?: string;
   content?: string;
@@ -48,7 +42,7 @@ export default function SingleBlock({
         >
           <div className="px-[38px] py-[63px] space-y-[25px] ">
             <p
-              className={` ${shippori_Mincho.className} text-[35px] leading-9 font-extrabold `}
+              className={` ${CustomFont?.shipporiFont?.className} text-[35px] leading-9 font-extrabold `}
             >
               {title}
             </p>

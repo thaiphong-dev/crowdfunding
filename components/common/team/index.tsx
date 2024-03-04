@@ -1,16 +1,9 @@
 import Profilecard from "@/components/common/profileCard";
 import React from "react";
-import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
-const shippori_Mincho = Shippori_Mincho({
-  weight: "800",
-  subsets: ["latin"],
-});
+import { CustomFont } from "../commonFont";
+
 export default function Team() {
   const mockData = [
     {
@@ -31,12 +24,12 @@ export default function Team() {
       <div className="w-[1200px] flex flex-col justify-center item-center text-center space-y-[30px]">
         <div>
           <p
-            className={`${sue_Ellen_Francisco.className} text-[35px] text-primary-2 capitalize`}
+            className={`${CustomFont?.sueFont?.className} text-[35px] text-primary-2 capitalize`}
           >
             Team
           </p>
           <p
-            className={`${shippori_Mincho.className} text-[40px] text-primary-3`}
+            className={`${CustomFont?.shipporiFont?.className} text-[40px] text-primary-3`}
           >
             Meet Our Volunteers
           </p>
@@ -53,7 +46,7 @@ export default function Team() {
               height={82}
             />
             <p
-              className={`${shippori_Mincho.className} w-[153px] text-[25px] text-primary-3 leading-[30px]`}
+              className={`${CustomFont?.shipporiFont?.className} w-[153px] text-[25px] text-primary-3 leading-[30px]`}
             >
               Become <br /> a Volunteer
             </p>

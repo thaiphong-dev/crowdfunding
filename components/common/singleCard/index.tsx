@@ -1,11 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { Shippori_Mincho } from "next/font/google";
-
-const shippori_Mincho = Shippori_Mincho({
-  weight: "700",
-  subsets: ["latin"],
-});
+import { CustomFont } from "../commonFont";
 
 interface Props {
   imgURL: string;
@@ -22,7 +17,7 @@ export default function SingleCard({ imgURL, name, career, content }: Props) {
       <div className="col-span-2 flex flex-col justify-center space-y-[10px] ">
         <div>
           <p
-            className={`${shippori_Mincho.className} text-[25px] text-primary-3 leading-[36px]`}
+            className={`${CustomFont?.shipporiFont700?.className} text-[25px] text-primary-3 leading-[36px]`}
           >
             {name}
           </p>

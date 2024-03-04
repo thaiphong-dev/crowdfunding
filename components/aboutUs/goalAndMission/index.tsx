@@ -35,8 +35,8 @@ export default function GoalAndMission() {
         </p>
       </div>
 
-      <div className="space-y-[20px] ">
-        <div>
+      <div className="space-y-[20px]">
+        <div className="space-y-[20px]">
           <p
             className={`${CustomFont?.shipporiFont?.className} text-primary-3 text-[40px] leading-[48px] capitalize`}
           >

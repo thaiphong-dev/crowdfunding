@@ -2,17 +2,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Shippori_Mincho } from "next/font/google";
 import React from "react";
-const shippori_Mincho = Shippori_Mincho({
-  weight: "600",
-  subsets: ["latin"],
-});
+import { CustomFont } from "../commonFont";
+
 export default function Index() {
   const menuList = [
     { label: "Home", link: "/" },
     { label: "About Us", link: "/aboutUs" },
-    { label: "Guide", link: "/guide" },
+    { label: "Causes", link: "/causes" },
     { label: "Event", link: "/event" },
     { label: "Contact", link: "/contact" },
     {
@@ -37,7 +34,7 @@ export default function Index() {
       </div>
       <div>
         <ul
-          className={`${shippori_Mincho.className} flex items-center justify-between space-x-[2rem]`}
+          className={`${CustomFont?.shipporiFont600?.className} flex items-center justify-between space-x-[2rem]`}
         >
           {menuList.map((item, index) => {
             return (
@@ -51,7 +48,9 @@ export default function Index() {
           })}
         </ul>
       </div>
-      <div className={`${shippori_Mincho.className} cursor-pointer`}>
+      <div
+        className={`${CustomFont?.shipporiFont600?.className} cursor-pointer`}
+      >
         <Link
           href="/login"
           className="text-[18px] text-primary-7 hover:text-primary-2 "
