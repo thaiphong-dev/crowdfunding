@@ -1,5 +1,6 @@
 import React from "react";
 import CommonBanner from "../common/banner";
+import CauseList from "./causesList";
 
 export default function Causes() {
   return (
@@ -10,9 +11,10 @@ export default function Causes() {
           title="our causes"
           imgURL="/image/causes/banner.png"
         />
-
-        <div className="flex flex-col justify-center items-center">
-          <div className="w-[1200px] space-y-[100px]"></div>
+        <div className="flex justify-center items-center bg-primary-4">
+          <div className="w-[1200px] pb-[100px] ">
+            <CauseList />
+          </div>
         </div>
       </div>
     </div>

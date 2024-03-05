@@ -14,6 +14,8 @@ interface Props {
   bgColor?: string;
   textColor?: string;
   titleColor?: string;
+  customWidth?: string;
+  customHeight?: string;
 }
 export default function SingleBlock({
   title,
@@ -25,20 +27,24 @@ export default function SingleBlock({
   titleColor,
   linkHref,
   type,
+  customWidth,
+  customHeight,
 }: Props) {
-  console.log({
-    title,
-    content,
-    buttonTitle,
-    linkTitle,
-    textColor,
-  });
-
   return (
-    <div className="w-[401px] h-[351px] flex items-center justify-center">
+    <div
+      className="w-[401px] h-[351px] flex items-center justify-center"
+      style={{
+        width: customWidth,
+        height: customHeight,
+      }}
+    >
       {type !== "video" ? (
         <div
           className={` w-[401px] h-[351px] flex items-center justify-center ${bgColor} ${titleColor} `}
+          style={{
+            width: customWidth,
+            height: customHeight,
+          }}
         >
           <div className="px-[38px] py-[63px] space-y-[25px] ">
             <p

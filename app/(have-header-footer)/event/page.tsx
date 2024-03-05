@@ -1,10 +1,10 @@
-import Causes from "@/components/causes";
+import Events from "@/components/events";
 import React from "react";
 
 export default function Page() {
   return (
     <div>
-      <Causes />
+      <Events />
     </div>
   );
 }
