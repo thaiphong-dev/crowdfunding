@@ -49,7 +49,7 @@ export default function Story() {
   ];
 
   return (
-    <div>
+    <div className=" space-y-[50px]">
       <div className="relative">
         <div className="z-10">
           <div className="absolute top-[10%] left-[15%] w-[754px] text-primary-def"></div>
@@ -62,6 +62,67 @@ export default function Story() {
                 <SingleBlock {...x} />
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+      <div className=" space-y-[100px] text-[20px] text-primary-7 flex justify-center ">
+        <div className="w-[882px] space-y-[50px] ">
+          <div className="space-y-[20px]">
+            <p
+              className={`${CustomFont?.shipporiFont?.className} sectionTitle !text-primary-3`}
+            >
+              Event Description
+            </p>
+            <p>
+              Veniam quae. Nostrum facere repellendus minus quod aut aliquam
+              neque reiciendis. Qui beatae vel magnam repudiandae ipsum repellat
+              repudiandae. Voluptate at dolores ut dolor sint occaecati
+              similique. Velit eius ab delectus temporibus.
+            </p>
+            <p>
+              For dynamic content, add a rich text field to any collection and
+              then connect a rich text element to that field in the settings
+              panel. Headings, paragraphs, block-quotes, figures, images, and
+              figure captions can all be styled.
+            </p>
+          </div>
+          <div className="space-y-[20px]">
+            <p
+              className={`${CustomFont?.shipporiFont?.className} sectionTitle !text-primary-3`}
+            >
+              Event Condent
+            </p>
+            <p>
+              Veniam quae. Nostrum facere repellendus minus quod aut aliquam
+              neque reiciendis. Qui beatae vel magnam repudiandae ipsum repellat
+              repudiandae. Voluptate at dolores ut dolor sint occaecati
+              similique. Velit eius ab delectus temporibus.
+            </p>
+          </div>
+          <div className="space-y-[20px]">
+            <p
+              className={`${CustomFont?.shipporiFont?.className} sectionTitle !text-primary-3`}
+            >
+              Details about the Event
+            </p>
+            <p>
+              Veniam quae. Nostrum facere repellendus minus quod aut aliquam
+              neque reiciendis. Qui beatae vel magnam repudiandae ipsum repellat
+              repudiandae. Voluptate at dolores ut dolor sint occaecati
+              similique. Velit eius ab delectus temporibus.
+            </p>
+            <p>
+              Headings, paragraphs, blockquotes, figures, images, and figure
+              captions can all be styled after A rich text element can be used
+              with static or dynamic content. For static content, just drop it
+              into any page and begin editing.
+            </p>
+            <p>
+              The rich text element allows you to create and format headings,
+              paragraphs, blockquotes, images, and video all in one place
+              instead of having to add and format them individually. Just
+              double-click and easily create content.
+            </p>
           </div>
         </div>
       </div>
