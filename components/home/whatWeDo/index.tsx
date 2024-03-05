@@ -1,14 +1,6 @@
 import React from "react";
-import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
 import SingleContentBlock from "@/components/common/singleContentBlock";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
-const shippori_Mincho = Shippori_Mincho({
-  weight: "800",
-  subsets: ["latin"],
-});
+import { CustomFont } from "@/components/common/commonFont";
 
 export default function WhatWeDo() {
   const mockData = [
@@ -53,12 +45,12 @@ export default function WhatWeDo() {
     <div className="w-[1200px]">
       <div className="text-center pb-[50px]">
         <p
-          className={`${sue_Ellen_Francisco.className} text-primary-2 text-[35px] leading-9`}
+          className={`${CustomFont?.sueFont?.className} text-primary-2 text-[35px] leading-9`}
         >
           What we do
         </p>
         <p
-          className={`${shippori_Mincho.className} text-primary-3 text-[40px] leading-[48px]`}
+          className={`${CustomFont?.shipporiFont?.className} text-primary-3 text-[40px] leading-[48px]`}
         >
           We do it for People in Need
         </p>

@@ -1,14 +1,7 @@
 import React from "react";
-import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
 import Image from "next/image";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
-const shippori_Mincho = Shippori_Mincho({
-  weight: "800",
-  subsets: ["latin"],
-});
+import { CustomFont } from "@/components/common/commonFont";
+
 export default function WhatWeDid() {
   const imglist = [
     "/image/weDid1.png",
@@ -24,12 +17,12 @@ export default function WhatWeDid() {
         <div className="w-[756px] space-y-[20px]">
           <div>
             <p
-              className={`${sue_Ellen_Francisco.className} text-[35px] capitalize leading-9 text-primary-2`}
+              className={`${CustomFont?.sueFont?.className} text-[35px] capitalize leading-9 text-primary-2`}
             >
               what we did
             </p>
             <p
-              className={`${shippori_Mincho.className} text-[40px] leading-[48px`}
+              className={`${CustomFont?.shipporiFont?.className} text-[40px] leading-[48px`}
             >
               Featured Projects
             </p>

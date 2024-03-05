@@ -1,7 +1,7 @@
 import React from "react";
-import CommonBanner from "../common/banner";
 import DetailContent from "./detail";
 import Donation from "./donation";
+import CommonBanner from "@/components/common/banner";
 
 export default function CauseDetail() {
   return (

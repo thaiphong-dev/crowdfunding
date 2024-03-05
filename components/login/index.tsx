@@ -1,17 +1,10 @@
 "use client";
 import React from "react";
 import LoginForm from "./loginForm";
-import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
-const shippori_Mincho = Shippori_Mincho({
-  weight: "800",
-  subsets: ["latin"],
-});
+import { CustomFont } from "@/components/common/commonFont";
+
 export default function Index() {
   const router = useRouter();
   return (
@@ -34,11 +27,13 @@ export default function Index() {
           </div>
           <div className="text-primary-def h-full max-w-[30rem]">
             <p
-              className={`${sue_Ellen_Francisco.className} text-primary-2 text-[35px] pb-2`}
+              className={`${CustomFont?.sueFont?.className} text-primary-2 text-[35px] pb-2`}
             >
               Our causes
             </p>
-            <p className={`${shippori_Mincho.className} text-[25px] pb-2`}>
+            <p
+              className={`${CustomFont?.shipporiFont?.className} text-[25px] pb-2`}
+            >
               Helping each other can make Word better
             </p>
             <p className="pb-2 text-[20px]">

@@ -1,4 +1,3 @@
-import React from "react";
 import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
 const sueFont = Sue_Ellen_Francisco({
   weight: "400",

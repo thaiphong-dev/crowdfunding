@@ -1,15 +1,8 @@
 import React from "react";
-import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
 import Image from "next/image";
 import TimeIcon from "@/components/common/timeIcon";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
-const shippori_Mincho = Shippori_Mincho({
-  weight: "800",
-  subsets: ["latin"],
-});
+import { CustomFont } from "@/components/common/commonFont";
+
 export default function OurEvent() {
   const mockData = [
     {
@@ -42,12 +35,12 @@ export default function OurEvent() {
       <div className="w-[1200px] flex justify-between">
         <div className="w-[620px]">
           <p
-            className={`${sue_Ellen_Francisco.className} text-[35px] text-primary-2 capitalize`}
+            className={`${CustomFont?.sueFont?.className} text-[35px] text-primary-2 capitalize`}
           >
             Our Events
           </p>
           <p
-            className={`${shippori_Mincho.className} text-[40px] text-primary-3 w-[473px]`}
+            className={`${CustomFont?.shipporiFont?.className} text-[40px] text-primary-3 w-[473px]`}
           >
             Join Upcoming Events Replays & Webinars
           </p>
@@ -64,7 +57,7 @@ export default function OurEvent() {
           <div className="relative">
             <Image alt="img" src="/image/event.png" width={600} height={344} />
             <div
-              className={`${shippori_Mincho.className} w-[116px] h-[140px] bg-primary-2 text-white text-[25px] leading-[30px] capitalize flex justify-center items-center text-center absolute top-0`}
+              className={`${CustomFont?.shipporiFont?.className} w-[116px] h-[140px] bg-primary-2 text-white text-[25px] leading-[30px] capitalize flex justify-center items-center text-center absolute top-0`}
             >
               <p>
                 <span className="text-[60px] leading-[72px]">18</span> june
@@ -85,7 +78,7 @@ export default function OurEvent() {
 
           <div className="border-t-[1px]">
             <p
-              className={`${shippori_Mincho.className} text-[25px] text-primary-3 leading-[30px] py-[10px]`}
+              className={`${CustomFont?.shipporiFont?.className} text-[25px] text-primary-3 leading-[30px] py-[10px]`}
             >
               Education for Poor Children
             </p>
@@ -110,7 +103,7 @@ export default function OurEvent() {
             <div key={index} className="h-[160px] border-b-[1px] ">
               <div className="flex space-x-[20px]">
                 <div
-                  className={`${shippori_Mincho.className} w-[116px] h-[140px] bg-primary-3 text-white text-[25px] leading-[30px] capitalize flex justify-center items-center text-center`}
+                  className={`${CustomFont?.shipporiFont?.className} w-[116px] h-[140px] bg-primary-3 text-white text-[25px] leading-[30px] capitalize flex justify-center items-center text-center`}
                 >
                   <p>
                     <span className="text-[60px] leading-[72px]">
@@ -128,7 +121,7 @@ export default function OurEvent() {
                     </span>
                   </p>
                   <p
-                    className={`${shippori_Mincho.className} text-[25px] text-primary-3`}
+                    className={`${CustomFont?.shipporiFont?.className} text-[25px] text-primary-3`}
                   >
                     {x?.title}
                   </p>

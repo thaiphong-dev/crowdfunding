@@ -1,18 +1,12 @@
 "use client";
 import React from "react";
-import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
+
 import SingleCard from "@/components/common/singleCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import Image from "next/image";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
-const shippori_Mincho = Shippori_Mincho({
-  weight: "800",
-  subsets: ["latin"],
-});
+import { CustomFont } from "@/components/common/commonFont";
+
 export default function Testimonial() {
   const mockData = [
     {
@@ -93,12 +87,12 @@ export default function Testimonial() {
     <div className="space-y-[50px]">
       <div className="text-center">
         <p
-          className={`${sue_Ellen_Francisco.className} text-primary-2 text-[35px] leading-9`}
+          className={`${CustomFont?.sueFont?.className} text-primary-2 text-[35px] leading-9`}
         >
           Testimonial
         </p>
         <p
-          className={`${shippori_Mincho.className} text-primary-3 text-[40px] leading-[48px]`}
+          className={`${CustomFont?.shipporiFont?.className} text-primary-3 text-[40px] leading-[48px]`}
         >
           What People Say About Us
         </p>

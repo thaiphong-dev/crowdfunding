@@ -1,27 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
 import React from "react";
 import CommonContentBlock from "../commonContentBlock";
+import { CustomFont } from "@/components/common/commonFont";
 
-import { Sue_Ellen_Francisco, Shippori_Mincho } from "next/font/google";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
-const shippori_Mincho = Shippori_Mincho({
-  weight: "800",
-  subsets: ["latin"],
-});
 export default function Banner() {
   return (
     <div className="relative">
       <div className="z-10">
         <div className="absolute top-[10%] left-[15%] w-[754px] text-primary-def">
-          <p className={`${sue_Ellen_Francisco.className} text-banner-sub`}>
+          <p className={`${CustomFont?.sueFont?.className} text-banner-sub`}>
             Need help...
           </p>
           <p
-            className={`${shippori_Mincho.className} text-banner-main capitalize`}
+            className={`${CustomFont?.shipporiFont?.className} text-banner-main capitalize`}
           >
             being life saver for someone
           </p>

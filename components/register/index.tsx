@@ -1,13 +1,10 @@
 "use client";
 import React from "react";
 import RegisterForm from "./registerForm";
-import { Sue_Ellen_Francisco } from "next/font/google";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { CustomFont } from "@/components/common/commonFont";
+
 export default function Index() {
   const router = useRouter();
   return (
@@ -26,7 +23,7 @@ export default function Index() {
       <div className="h-[90%] flex items-center justify-center">
         <div className="h-[32rem]  flex items-center justify-between ">
           <div className="text-primary-def h-full max-w-[30rem] mr-[2rem] ">
-            <p className={`${sue_Ellen_Francisco.className} text-xl pb-2`}>
+            <p className={`${CustomFont?.sueFont?.className} text-xl pb-2`}>
               How We Help
             </p>
             <p className="text-2xl pb-2">

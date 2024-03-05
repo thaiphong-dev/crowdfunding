@@ -3,11 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Sue_Ellen_Francisco } from "next/font/google";
-const sue_Ellen_Francisco = Sue_Ellen_Francisco({
-  weight: "400",
-  subsets: ["latin"],
-});
+import { CustomFont } from "@/components/common/commonFont";
+
 interface FormValue {
   email: string;
   fullName: string;
@@ -30,7 +27,7 @@ export default function RegisterForm() {
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="mb-4 text-center text-primary-def text-[2.5rem]">
-          <p className={sue_Ellen_Francisco.className}>Become A Volunteer</p>
+          <p className={CustomFont?.sueFont?.className}>Become A Volunteer</p>
         </div>
         <div className="mb-4">
           <label
