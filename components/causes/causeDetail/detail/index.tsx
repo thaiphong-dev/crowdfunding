@@ -3,13 +3,84 @@ import React from "react";
 import { CustomFont } from "@/components/common/commonFont";
 export default function DetailContent() {
   return (
-    <div className="space-y-[100px] text-[20px] text-primary-7">
-      <Image
-        src="/image/causedetail/image.png"
-        width={1200}
-        height={617}
-        alt="img"
-      />
+    <div className=" text-[20px] text-primary-7">
+      <div className="min-h-[620px] ">
+        <div className="relative">
+          <div className="flex space-x-[20px] bg-primary-6">
+            <div>
+              <Image
+                className="rounded-[34px]"
+                alt="story img"
+                src="/image/about/storyImg.png"
+                width={560}
+                height={502}
+              />
+            </div>
+            <div className="w-[620px] p-[20px] space-y-[40px] ">
+              <div className="space-y-[10px]">
+                <p
+                  className={`${CustomFont?.shipporiFont?.className} sectionContent w-[494px] !text-primary-3 `}
+                >
+                  Solutions to Help People <br /> in Need and Save <br /> the
+                  Planet
+                </p>
+              </div>
+              <div className={`${CustomFont?.shipporiFont?.className}`}>
+                <div className="flex justify-between items-center ">
+                  <div className="flex justify-between items-center space-x-[20px]">
+                    <Image
+                      alt="ava"
+                      src="/image/causeDetail/ava.jpeg"
+                      width={50}
+                      height={50}
+                      className="rounded-full"
+                    />
+                    <p
+                      className={`${CustomFont?.shipporiFont?.className} !text-[25px] !text-primary-2 `}
+                    >
+                      Children of viet nam
+                    </p>
+                  </div>
+
+                  <div className="flex justify-between items-center space-x-[20px]">
+                    <Image
+                      alt="ava"
+                      src="/image/causeDetail/person.svg"
+                      width={17}
+                      height={17}
+                    />
+                    <p>182 votes</p>
+                  </div>
+                </div>
+
+                {/* ////// */}
+
+                <div className="flex-start flex h-1.5 w-full overflow-hidden rounded-full bg-primary-bg-bar font-sans text-xs font-medium my-[20px]">
+                  <div className="flex items-center justify-center w-1/2 h-full overflow-hidden text-white break-all bg-primary-2 rounded-full"></div>
+                </div>
+                <div className="flex flex-row justify-between">
+                  <p
+                    className={`${CustomFont?.shipporiFont.className} text-[20px] leading-[24px] `}
+                  >
+                    Collection - $5M
+                  </p>
+                  <p
+                    className={`${CustomFont?.shipporiFont.className} text-[20px] leading-[24px] `}
+                  >
+                    Goal - $10M
+                  </p>
+                </div>
+                <div className="flex justify-end mt-8">
+                  <button className="uppercase bg-primary-2 text-white !font-medium text-[20px] leading-5 w-[200px] h-[65px] rounded-[34px] mt-[50px]">
+                    Donat Now
+                  </button>
+                </div>
+              </div>
+              {/* <button className="darkButton">More About</button> */}
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="space-y-[50px]">
         <div>
           <p

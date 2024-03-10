@@ -24,6 +24,7 @@ const config: Config = {
         'primary-6': '#F2F2F2',
         'primary-7': '#727272',
         'primary-8': '#384C56',
+        'primary-bg-bar': '#ff2e5b1a',
         'primary-def': '#E6E6E6',
       },
       fontSize: {
