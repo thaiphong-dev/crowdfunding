@@ -16,8 +16,8 @@ export default function CommonBanner({
 }: Props) {
   return (
     <div>
-      <div className="z-10">
-        <div className="absolute top-[160px] left-[200px] w-[1285px] text-primary-def">
+      <div className="z-10 relative">
+        <div className="absolute top-[30%] left-[200px] w-[1285px] text-primary-def">
           <div className="relative top-[-25%]">
             <p
               className={`${CustomFont?.sueFont?.className} capitalize text-banner-sub`}
@@ -32,7 +32,7 @@ export default function CommonBanner({
             </p>
           </div>
         </div>
-        <img src={imgURL} alt="mainbanner" />
+        <img className="max-h-[1029px]" src={imgURL} alt="mainbanner" />
       </div>
     </div>
   );
