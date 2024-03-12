@@ -8,8 +8,6 @@ export default function OurCauses() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const titleRef = useRef(null);
-  const isTitleInview = useInView(ref, { once: true });
   return (
     <div
       ref={ref}
@@ -18,10 +16,10 @@ export default function OurCauses() {
       <div className="w-[1200px] flex justify-between">
         <div className="w-[620px]">
           <motion.p
-            initial={{ opacity: 0, translateX: -200 }}
+            initial={{ opacity: 0, translateX: 200 }}
             animate={{
               opacity: isInView ? 1 : 0,
-              translateX: isInView ? 0 : -200,
+              translateX: isInView ? 0 : 200,
             }}
             transition={{ delay: 0.5, ease: "backOut", duration: 1 }}
             className={`${CustomFont?.sueFont?.className} text-[35px] text-primary-2 capitalize`}
@@ -29,11 +27,10 @@ export default function OurCauses() {
             our causes
           </motion.p>
           <motion.p
-            ref={titleRef}
-            initial={{ opacity: 0, translateX: -200 }}
+            initial={{ opacity: 0, translateX: 200 }}
             animate={{
               opacity: isInView ? 1 : 0,
-              translateX: isInView ? 0 : -200,
+              translateX: isInView ? 0 : 200,
             }}
             transition={{ delay: 0.5, ease: "backOut", duration: 1 }}
             className={`${CustomFont?.shipporiFont?.className} text-[40px] text-primary-3`}
@@ -59,14 +56,7 @@ export default function OurCauses() {
           </motion.button>
         </div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, translateX: -200 }}
-        animate={{
-          opacity: isTitleInview ? 1 : 0,
-          translateX: isTitleInview ? 0 : -200,
-        }}
-        transition={{ delay: 1, ease: "backOut", duration: 1 }}
-      >
+      <motion.div>
         <EventSwiper />
       </motion.div>
     </div>

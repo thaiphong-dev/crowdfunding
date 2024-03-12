@@ -1,11 +1,13 @@
 "use client";
 import SingleEvent from "@/components/common/singleEvent";
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import { motion } from "framer-motion";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { motion, useInView } from "framer-motion";
 
 export default function EventSwiper() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const mockData = [
     {
       imgURL: "/image/eventImg.png",
@@ -44,19 +46,26 @@ export default function EventSwiper() {
     },
   ];
   return (
-    <div className="w-[1400px] cursor-pointer">
+    <div ref={ref} className="w-[1400px] cursor-pointer">
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        speed={1200}
+        loop
+        modules={[Autoplay, Pagination, Navigation]}
         className="h-[750px]"
       >
         {mockData?.map((x, index) => (
           <SwiperSlide key={index}>
-            <SingleEvent {...x} />
+            <SingleEvent {...x} count={index + 1} isInView={isInView} />
           </SwiperSlide>
         ))}
       </Swiper>

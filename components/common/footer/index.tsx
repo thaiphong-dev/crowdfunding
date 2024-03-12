@@ -1,9 +1,10 @@
 "use client";
-import React from "react";
+import React, { useRef } from "react";
 import { Shippori_Mincho } from "next/font/google";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { motion, useInView } from "framer-motion";
 
 const shippori_Mincho = Shippori_Mincho({
   weight: "800",
@@ -40,8 +41,17 @@ export default function Footer() {
       link: "/team",
     },
   ];
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: "all" });
+
   return (
-    <div className="w-full h-[550px] bg-primary-3 text-white flex justify-center items-center ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isInView ? 1 : 0, translateX: isInView ? 0 : -200 }}
+      transition={{ delay: isInView ? 1 : 2, ease: "easeIn", duration: 1 }}
+      ref={ref}
+      className="w-full h-[550px] bg-primary-3 text-white flex justify-center items-center "
+    >
       <div className="w-[1200px] h-[358px] flex justify-center items-center">
         <div className="w-[363px] space-y-[20px]">
           <div>
@@ -99,6 +109,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

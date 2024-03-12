@@ -72,7 +72,7 @@ export default function AboutUs() {
       <motion.div
         initial={{ opacity: 0, translateX: 200 }}
         animate={{ opacity: isInView ? 1 : 0, translateX: isInView ? 0 : 200 }}
-        transition={{ delay: 1, ease: "backOut", duration: 1 }}
+        transition={{ delay: 0.5, ease: "backOut", duration: 1 }}
         className="bg-primary-5 flex justify-center items-center"
       >
         <div className=" w-[580px] px-[40px] h-[380px] space-y-[15px]">
@@ -84,7 +84,7 @@ export default function AboutUs() {
                   opacity: isInView ? 1 : 0,
                 }}
                 transition={{
-                  delay: index + 1,
+                  delay: (index + 1) / 2,
                   ease: "backOut",
                   duration: 1,
                 }}

@@ -6,9 +6,11 @@ import { motion, useInView } from "framer-motion";
 interface Props {
   imgURL: string;
   title: string;
-  raised: Number;
-  goal: Number;
-  percent: Number;
+  raised: number;
+  goal: number;
+  percent: number;
+  count: number;
+  isInView: boolean;
 }
 export default function SingleEvent({
   imgURL,
@@ -16,9 +18,23 @@ export default function SingleEvent({
   raised,
   goal,
   percent,
+  count,
+  isInView,
 }: Props) {
   return (
-    <div className="w-full flex flex-col justify-center items-center">
+    <motion.div
+      initial={{ opacity: 0, translateX: 200 }}
+      animate={{
+        opacity: isInView ? 1 : 0,
+        translateX: isInView ? 0 : 200,
+      }}
+      transition={{
+        delay: (count / 2) as number,
+        ease: "backOut",
+        duration: 1,
+      }}
+      className="w-full flex flex-col justify-center items-center"
+    >
       <motion.div
         initial={{ scale: 1 }}
         whileHover={{
@@ -66,6 +82,6 @@ export default function SingleEvent({
           </div>
         </div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
