@@ -1,6 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import React from "react";
 import { CustomFont } from "../commonFont";
+import useFirstShowContent from "@/hook/useFirstShowContent";
+import { motion } from "framer-motion";
 
 interface Props {
   subTitle: string;
@@ -19,17 +22,29 @@ export default function CommonBanner({
       <div className="z-10 relative">
         <div className="absolute top-[30%] left-[200px] w-[1285px] text-primary-def">
           <div className="relative top-[-25%]">
-            <p
-              className={`${CustomFont?.sueFont?.className} capitalize text-banner-sub`}
+            <motion.div
+              initial={{ opacity: 0, scale: 1.1 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1, ease: "easeOut", duration: 1 }}
             >
-              {subTitle}
-            </p>
-            <p
-              className={`${CustomFont?.shipporiFont?.className} text-banner-main capitalize `}
-              style={{ width: customWidth }}
+              <p
+                className={`${CustomFont?.sueFont?.className} capitalize text-banner-sub`}
+              >
+                {subTitle}
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, scale: 1.2 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 1.5, ease: "easeOut", duration: 1 }}
             >
-              {title}
-            </p>
+              <p
+                className={`${CustomFont?.shipporiFont?.className} text-banner-main capitalize `}
+                style={{ width: customWidth }}
+              >
+                {title}
+              </p>
+            </motion.div>
           </div>
         </div>
         <img className="max-h-[1029px]" src={imgURL} alt="mainbanner" />

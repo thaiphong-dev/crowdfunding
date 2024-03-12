@@ -3,6 +3,7 @@ import Link from "next/link";
 import React from "react";
 import VideoPlayer from "../videoPlayer";
 import { CustomFont } from "../commonFont";
+import { motion } from "framer-motion";
 
 interface Props {
   title?: string;
@@ -54,19 +55,31 @@ export default function SingleBlock({
             </p>
             <p className={`text-[20px] font-normal ${textColor}`}>{content}</p>
             {buttonTitle && (
-              <button className="min-w-[145px] min-h-[65px] bg-white rounded-[34px] uppercase">
+              <motion.button
+                whileHover={{
+                  scale: 1.2,
+                  transition: { duration: 1 },
+                }}
+                className="min-w-[145px] min-h-[65px] bg-white rounded-[34px] uppercase"
+              >
                 {buttonTitle}
-              </button>
+              </motion.button>
             )}
             {linkTitle && (
-              <div>
+              <motion.div
+                whileHover={{
+                  scale: 1.2,
+                  translateX: 20,
+                  transition: { duration: 1 },
+                }}
+              >
                 <Link
                   className="uppercase underline mt-[10px]"
                   href={linkHref ?? ""}
                 >
                   {linkTitle}
                 </Link>
-              </div>
+              </motion.div>
             )}
           </div>
         </div>

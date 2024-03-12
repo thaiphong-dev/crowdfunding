@@ -4,6 +4,7 @@ import "../globals.css";
 import "swiper/swiper-bundle.css";
 import Header from "@/components/common/header";
 import Footer from "@/components/common/footer";
+
 const work_Sans = Work_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {

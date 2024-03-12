@@ -36,3 +36,49 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+.delayBox {
+  @apply animate-['zoom-in'] delay-1000
+    /* animation-name: rotate;
+    animation-duration: 0.7s;
+    animation-delay: 2s; */
+}
+.text-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s, transform 1s;
+}
+
+/* styles.css */
+@layer base {
+  /* Base styles here */
+}
+
+@layer components {
+  /* Component styles here */
+}
+
+@layer utilities {
+  /* Utility styles here */
+}
+
+/* Custom styles */
+@layer base {
+  .text-animation {
+    opacity: 0;
+    transform: translateY(-20px);
+    /* Xuất hiện từ trên xuống */
+    transition: opacity 1s, transform 1s;
+  }
+}
+
+@layer components {
+  .from-right {
+    transform: translateX(20px);
+    /* Hiệu ứng từ ngoài vào từ bên phải */
+  }
+
+  .from-left {
+    transform: translateX(-20px);
+    /* Hiệu ứng từ ngoài vào từ bên trái */
+  }
+}
