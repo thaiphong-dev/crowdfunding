@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { CustomFont } from "../commonFont";
+import { motion, useInView } from "framer-motion";
 
 interface Props {
   imgURL: string;
@@ -18,7 +19,14 @@ export default function SingleEvent({
 }: Props) {
   return (
     <div className="w-full flex flex-col justify-center items-center">
-      <div className="bg-white w-[440px] h-[695px]">
+      <motion.div
+        initial={{ scale: 1 }}
+        whileHover={{
+          scale: 1.1,
+          transition: { duration: 0.5 },
+        }}
+        className="bg-white w-[440px] h-[695px]"
+      >
         <div className="relative">
           <Image alt="event img" src={imgURL} width={437} height={387} />
           <div
@@ -57,7 +65,7 @@ export default function SingleEvent({
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

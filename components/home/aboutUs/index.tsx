@@ -1,7 +1,8 @@
-import React from "react";
-
+"use client";
+import React, { useRef } from "react";
 import CheckIcon from "@/components/common/checkIcon";
 import { CustomFont } from "@/components/common/commonFont";
+import { motion, useInView } from "framer-motion";
 
 export default function AboutUs() {
   const checkList = [
@@ -24,9 +25,21 @@ export default function AboutUs() {
       label: "Toys Donation",
     },
   ];
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className="w-[1200px] h-[450px] flex justify-center space-x-[30px]">
-      <div className="w-[850px] space-y-[15px] ">
+    <div
+      ref={ref}
+      className="w-[1200px] h-[450px] flex justify-center space-x-[30px]"
+    >
+      <motion.div
+        initial={{ opacity: 0, translateX: -200 }}
+        animate={{ opacity: isInView ? 1 : 0, translateX: isInView ? 0 : -200 }}
+        transition={{ delay: 0.5, ease: "backOut", duration: 1 }}
+        className="w-[850px] space-y-[15px] "
+      >
         <p className={`${CustomFont?.sueFont?.className} sectionTitle`}>
           About Us
         </p>
@@ -46,21 +59,41 @@ export default function AboutUs() {
           galley of type and scrambled it to make a type specimen book.
           essentially.
         </p>
-        <button className="uppercase font-medium bg-primary-2 text-white text-[18px] leading-5 w-[200px] h-[65px] rounded-[34px]">
+        <motion.button
+          whileHover={{
+            scale: 1.1,
+            transition: { duration: 0.5 },
+          }}
+          className="uppercase font-medium bg-primary-2 text-white text-[18px] leading-5 w-[200px] h-[65px] rounded-[34px]"
+        >
           More About
-        </button>
-      </div>
-      <div className="bg-primary-5 flex justify-center items-center">
+        </motion.button>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, translateX: 200 }}
+        animate={{ opacity: isInView ? 1 : 0, translateX: isInView ? 0 : 200 }}
+        transition={{ delay: 1, ease: "backOut", duration: 1 }}
+        className="bg-primary-5 flex justify-center items-center"
+      >
         <div className=" w-[580px] px-[40px] h-[380px] space-y-[15px]">
           <div className="flex flex-wrap justify-between ">
-            {checkList?.map((x) => (
-              <div
+            {checkList?.map((x, index) => (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: isInView ? 1 : 0,
+                }}
+                transition={{
+                  delay: index + 1,
+                  ease: "backOut",
+                  duration: 1,
+                }}
                 className="w-[250px] h-[43px] text-[20px] font-semibold text-primary-7"
                 key={x?.label}
               >
                 <CheckIcon />
                 <div className="ml-[40px]">{x?.label}</div>
-              </div>
+              </motion.div>
             ))}
           </div>
           <div className="w-[443px]">
@@ -70,7 +103,15 @@ export default function AboutUs() {
               Total Donation
             </p>
             <div className="flex-start flex h-1.5 w-full overflow-hidden rounded-full bg-[#C5CECC] font-sans text-xs font-medium my-[20px]">
-              <div className="flex items-center justify-center w-1/2 h-full overflow-hidden text-white break-all bg-primary-2 rounded-full"></div>
+              <motion.div
+                initial={{ opacity: 0, translateX: -200 }}
+                animate={{
+                  opacity: isInView ? 1 : 0,
+                  translateX: isInView ? 0 : -200,
+                }}
+                transition={{ delay: 3, ease: "easeOut", duration: 1 }}
+                className="flex items-center justify-center w-1/2 h-full overflow-hidden text-white break-all bg-primary-2 rounded-full"
+              ></motion.div>
             </div>
             <div className="flex flex-row justify-between">
               <p
@@ -84,12 +125,18 @@ export default function AboutUs() {
                 Goal - $10M
               </p>
             </div>
-            <button className="uppercase bg-white font-medium text-[18px] leading-5 w-[200px] h-[65px] rounded-[34px] mt-[50px]">
+            <motion.button
+              whileHover={{
+                scale: 1.1,
+                transition: { duration: 0.5 },
+              }}
+              className="uppercase bg-white font-medium text-[18px] leading-5 w-[200px] h-[65px] rounded-[34px] mt-[50px]"
+            >
               Donat Now
-            </button>
+            </motion.button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -3,6 +3,8 @@ import SingleEvent from "@/components/common/singleEvent";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import { motion } from "framer-motion";
+
 export default function EventSwiper() {
   const mockData = [
     {
@@ -42,7 +44,7 @@ export default function EventSwiper() {
     },
   ];
   return (
-    <div className="w-[1400px]">
+    <div className="w-[1400px] cursor-pointer">
       <Swiper
         slidesPerView={3}
         spaceBetween={30}
