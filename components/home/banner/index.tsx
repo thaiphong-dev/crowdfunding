@@ -13,7 +13,7 @@ export default function Banner() {
           <motion.div
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1, ease: "easeOut", duration: 1 }}
+            transition={{ delay: 0.05, ease: "easeOut", duration: 1 }}
           >
             <p className={`${CustomFont?.sueFont?.className} text-banner-sub `}>
               Need help...
@@ -22,7 +22,7 @@ export default function Banner() {
           <motion.div
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1.5, ease: "easeOut", duration: 1 }}
+            transition={{ delay: 0.1, ease: "easeOut", duration: 1 }}
           >
             <p
               className={`${CustomFont?.shipporiFont?.className} text-banner-main capitalize`}
@@ -34,7 +34,7 @@ export default function Banner() {
             className="pt-[10%] flex"
             initial={{ opacity: 0, translateX: -200 }}
             animate={{ opacity: 1, translateX: 0 }}
-            transition={{ delay: 2, ease: "easeOut", duration: 1 }}
+            transition={{ delay: 0.15, ease: "easeOut", duration: 1 }}
           >
             <motion.button
               whileHover={{
@@ -45,8 +45,8 @@ export default function Banner() {
             >
               <span>donate</span>
               <motion.div
-                animate={{ scale: [1, 1.25, 1] }}
-                transition={{ repeat: Infinity, repeatDelay: 2 }}
+                animate={{ scale: [1, 1.4, 1] }}
+                transition={{ repeat: Infinity, repeatDelay: 0.1 }}
               >
                 <FaHeart fill="red" />
               </motion.div>

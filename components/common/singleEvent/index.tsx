@@ -29,7 +29,7 @@ export default function SingleEvent({
         translateX: isInView ? 0 : 200,
       }}
       transition={{
-        delay: (count / 2) as number,
+        delay: (count * 0.05) as number,
         ease: "backOut",
         duration: 1,
       }}

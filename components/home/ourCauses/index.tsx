@@ -21,7 +21,7 @@ export default function OurCauses() {
               opacity: isInView ? 1 : 0,
               translateX: isInView ? 0 : 200,
             }}
-            transition={{ delay: 0.5, ease: "backOut", duration: 1 }}
+            transition={{ delay: 0.05, ease: "backOut", duration: 1 }}
             className={`${CustomFont?.sueFont?.className} text-[35px] text-primary-2 capitalize`}
           >
             our causes
@@ -32,7 +32,7 @@ export default function OurCauses() {
               opacity: isInView ? 1 : 0,
               translateX: isInView ? 0 : 200,
             }}
-            transition={{ delay: 0.5, ease: "backOut", duration: 1 }}
+            transition={{ delay: 0.05, ease: "backOut", duration: 1 }}
             className={`${CustomFont?.shipporiFont?.className} text-[40px] text-primary-3`}
           >
             You can help lots of people by donating little.
@@ -45,7 +45,7 @@ export default function OurCauses() {
               opacity: isInView ? 1 : 0,
               translateX: isInView ? 0 : 200,
             }}
-            transition={{ delay: 0.5, ease: "backOut", duration: 1 }}
+            transition={{ delay: 0.05, ease: "backOut", duration: 1 }}
             whileHover={{
               scale: 1.1,
               transition: { duration: 0.5 },

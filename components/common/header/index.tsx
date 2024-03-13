@@ -46,7 +46,7 @@ export default function Index() {
       <motion.div
         initial={{ opacity: 0, translateY: -100 }}
         animate={{ opacity: 1, translateY: 0 }}
-        transition={{ delay: 0.1, ease: "backOut", duration: 1 }}
+        transition={{ delay: 0.05, ease: "backOut", duration: 1 }}
       >
         <Image
           onClick={() => {
@@ -69,7 +69,7 @@ export default function Index() {
                 initial={{ opacity: 0, translateY: -100 }}
                 animate={{ opacity: 1, translateY: 0 }}
                 transition={{
-                  delay: (index + 1) / 5,
+                  delay: (index + 1) * 0.1,
                   ease: "backOut",
                   duration: 1,
                 }}
@@ -87,7 +87,7 @@ export default function Index() {
       <motion.div
         initial={{ opacity: 0, translateY: -100 }}
         animate={{ opacity: 1, translateY: 0 }}
-        transition={{ delay: 1.5, ease: "backOut", duration: 1 }}
+        transition={{ delay: 0.1, ease: "backOut", duration: 1 }}
         className={`${CustomFont?.shipporiFont600?.className} cursor-pointer`}
       >
         <Link href="/login" className="text-[18px]  hover:text-primary-2 ">

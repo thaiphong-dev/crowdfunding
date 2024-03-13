@@ -25,7 +25,7 @@ export default function CommonBanner({
             <motion.div
               initial={{ opacity: 0, scale: 1.1 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1, ease: "easeOut", duration: 1 }}
+              transition={{ delay: 0.05, ease: "easeOut", duration: 1 }}
             >
               <p
                 className={`${CustomFont?.sueFont?.className} capitalize text-banner-sub`}
@@ -36,7 +36,7 @@ export default function CommonBanner({
             <motion.div
               initial={{ opacity: 0, scale: 1.2 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1.5, ease: "easeOut", duration: 1 }}
+              transition={{ delay: 0.1, ease: "easeOut", duration: 1 }}
             >
               <p
                 className={`${CustomFont?.shipporiFont?.className} text-banner-main capitalize `}

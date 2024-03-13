@@ -25,7 +25,7 @@ export default function SingleCause({
     <motion.div
       initial={{ opacity: 0, scale: 1 }}
       animate={{ opacity: isInView ? 1 : 0 }}
-      transition={{ delay: 0.25, ease: "easeIn", duration: 1 }}
+      transition={{ delay: 0.05, ease: "easeIn", duration: 1 }}
       ref={ref}
       className="w-full flex flex-col justify-center items-center"
     >

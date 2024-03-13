@@ -33,13 +33,8 @@ export default function Story() {
   ];
 
   const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.5, once: true });
+  const isInView = useInView(ref, { amount: 0.2, once: true });
 
-  const variants = {
-    initial: { opacity: 0 },
-    animate: { opacity: isInView ? 1 : 0 },
-    transition: { delay: 0.5, ease: "anticipate", duration: 1 },
-  };
   return (
     <motion.div ref={ref} className="space-y-[100px]">
       <div className="min-h-[620px]">
@@ -48,7 +43,7 @@ export default function Story() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: isInView ? 1 : 0 }}
-              transition={{ delay: 0.5, ease: "anticipate", duration: 1 }}
+              transition={{ delay: 0.05, ease: "anticipate", duration: 1 }}
             >
               <Image
                 alt="story img"
@@ -66,7 +61,7 @@ export default function Story() {
                     scale: isInView ? 1 : 1.2,
                     translateX: isInView ? 0 : 50,
                   }}
-                  transition={{ delay: 0.7, ease: "easeOut", duration: 0.5 }}
+                  transition={{ delay: 0.07, ease: "easeOut", duration: 0.5 }}
                   className={`${CustomFont?.sueFont?.className} sectionTitle`}
                 >
                   about us
@@ -78,7 +73,7 @@ export default function Story() {
                     scale: isInView ? 1 : 1.2,
                     translateX: isInView ? 0 : 50,
                   }}
-                  transition={{ delay: 0.9, ease: "easeOut", duration: 0.5 }}
+                  transition={{ delay: 0.09, ease: "easeOut", duration: 0.5 }}
                   className={`${CustomFont?.shipporiFont?.className} sectionContent w-[494px] `}
                 >
                   Solutions to Help People <br /> in Need and Save <br /> the
@@ -91,7 +86,7 @@ export default function Story() {
                     scale: isInView ? 1 : 1.2,
                     translateX: isInView ? 0 : 50,
                   }}
-                  transition={{ delay: 1.1, ease: "easeOut", duration: 0.5 }}
+                  transition={{ delay: 0.11, ease: "easeOut", duration: 0.5 }}
                   className="text-[20px] text-primary-7"
                 >
                   Lorem Ipsum is simply dummy text of the printin typesetting
@@ -105,7 +100,7 @@ export default function Story() {
                     scale: isInView ? 1 : 1.2,
                     translateX: isInView ? 0 : 50,
                   }}
-                  transition={{ delay: 1.3, ease: "easeOut", duration: 0.5 }}
+                  transition={{ delay: 0.13, ease: "easeOut", duration: 0.5 }}
                   className="text-[#538582] text-[20px] font-medium bg-[#DEF1F0] text-center w-[600px]"
                 >
                   <motion.p>
@@ -120,7 +115,7 @@ export default function Story() {
                   scale: isInView ? 1 : 1.2,
                   translateX: isInView ? 0 : 200,
                 }}
-                transition={{ delay: 1.5, ease: "easeOut", duration: 0.5 }}
+                transition={{ delay: 0.15, ease: "easeOut", duration: 0.5 }}
                 className="darkButton"
               >
                 More About
@@ -134,7 +129,7 @@ export default function Story() {
               scale: isInView ? 1 : 1.2,
               translateX: isInView ? 0 : -200,
             }}
-            transition={{ delay: 1.5, ease: "easeOut", duration: 0.5 }}
+            transition={{ delay: 0.15, ease: "easeOut", duration: 0.5 }}
             className="bg-primary-3 text-white flex justify-center items-center w-[455px] h-[170px] space-x-[20px] absolute top-[90%] left-[-5%]"
           >
             <div className="pt-[10px]">

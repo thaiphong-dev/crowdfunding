@@ -37,7 +37,7 @@ export default function AboutUs() {
       <motion.div
         initial={{ opacity: 0, translateX: -200 }}
         animate={{ opacity: isInView ? 1 : 0, translateX: isInView ? 0 : -200 }}
-        transition={{ delay: 0.5, ease: "backOut", duration: 1 }}
+        transition={{ delay: 0.05, ease: "backOut", duration: 1 }}
         className="w-[850px] space-y-[15px] "
       >
         <p className={`${CustomFont?.sueFont?.className} sectionTitle`}>
@@ -72,7 +72,7 @@ export default function AboutUs() {
       <motion.div
         initial={{ opacity: 0, translateX: 200 }}
         animate={{ opacity: isInView ? 1 : 0, translateX: isInView ? 0 : 200 }}
-        transition={{ delay: 0.5, ease: "backOut", duration: 1 }}
+        transition={{ delay: 0.05, ease: "backOut", duration: 1 }}
         className="bg-primary-5 flex justify-center items-center"
       >
         <div className=" w-[580px] px-[40px] h-[380px] space-y-[15px]">
@@ -84,7 +84,7 @@ export default function AboutUs() {
                   opacity: isInView ? 1 : 0,
                 }}
                 transition={{
-                  delay: (index + 1) / 2,
+                  delay: (index + 1) * 0.5,
                   ease: "backOut",
                   duration: 1,
                 }}
@@ -109,7 +109,7 @@ export default function AboutUs() {
                   opacity: isInView ? 1 : 0,
                   translateX: isInView ? 0 : -200,
                 }}
-                transition={{ delay: 3, ease: "easeOut", duration: 1 }}
+                transition={{ delay: 1, ease: "easeOut", duration: 1 }}
                 className="flex items-center justify-center w-1/2 h-full overflow-hidden text-white break-all bg-primary-2 rounded-full"
               ></motion.div>
             </div>
