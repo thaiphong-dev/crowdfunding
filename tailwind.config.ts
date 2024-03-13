@@ -60,13 +60,25 @@ const config: Config = {
                         transform: 'scale(1)'
                     },
                 },
+                'pulse': {
+                    '0%': {
+                        opacity: '1',
+                    },
+                    '50%': {
+                        opacity: '0.3',
+                    },
+                    '100%':{
+                        opacity: '1',
+                    },
+                },
             },
             animation: {
                 'fade-in-down': 'fade-in-down 0.5s ease-out',
                 'fade-out-down': 'fade-out-down 0.5s ease-out',
                 'fade-in-up': 'fade-in-up 0.5s ease-out',
                 'fade-out-up': 'fade-out-up 0.5s ease-out',
-                'zoom-in': 'zoom-in 0.5s linear'
+                'zoom-in': 'zoom-in 0.5s linear',
+                'pulse': ' pulse 1.4s cubic-bezier(0.4, 0, 0.6, 1) infinite'
             },
            
       backgroundImage: {

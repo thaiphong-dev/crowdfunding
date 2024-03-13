@@ -4,6 +4,7 @@ import React from "react";
 import { CustomFont } from "../commonFont";
 import useFirstShowContent from "@/hook/useFirstShowContent";
 import { motion } from "framer-motion";
+import { FaHeart } from "react-icons/fa";
 
 interface Props {
   subTitle: string;
@@ -19,8 +20,8 @@ export default function CommonBanner({
 }: Props) {
   return (
     <div>
-      <div className="z-10 relative">
-        <div className="absolute top-[30%] left-[200px] w-[1285px] text-primary-def">
+      <div className="z-10 relative top-0 h-[100vh] bg-primary-7">
+        <div className="absolute top-[35%] left-[15%] w-[1285px] text-primary-def">
           <div className="relative top-[-25%]">
             <motion.div
               initial={{ opacity: 0, scale: 1.1 }}
@@ -47,7 +48,8 @@ export default function CommonBanner({
             </motion.div>
           </div>
         </div>
-        <img className="max-h-[1029px]" src={imgURL} alt="mainbanner" />
+
+        <img alt="banner" className="h-[100vh]" width="full" src={imgURL} />
       </div>
     </div>
   );

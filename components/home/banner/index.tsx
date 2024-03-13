@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CommonContentBlock from "../commonContentBlock";
 import { CustomFont } from "@/components/common/commonFont";
 import { motion } from "framer-motion";
@@ -8,8 +8,8 @@ import { FaHeart } from "react-icons/fa";
 export default function Banner() {
   return (
     <div className="relative">
-      <div className="z-10">
-        <div className="absolute top-[10%] left-[15%] w-[754px] text-primary-def">
+      <div className="z-10 relative top-0 h-[100vh] bg-primary-7">
+        <div className="absolute top-[20%] left-[15%] w-[754px] text-primary-def">
           <motion.div
             initial={{ opacity: 0, scale: 1.1 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -63,9 +63,10 @@ export default function Banner() {
             </motion.button>
           </motion.div>
         </div>
-        <img src="/image/mainBanner.png" alt="mainbanner" />
+
+        <img alt="banner" className="h-[100vh]" src="/image/mainBanner.png" />
       </div>
-      <div className="mt-[-5%]">
+      <div className="mt-[-5%] relative z-30">
         <CommonContentBlock />
       </div>
     </div>
