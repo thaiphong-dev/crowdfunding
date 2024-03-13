@@ -47,8 +47,8 @@ export default function Footer() {
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: isInView ? 1 : 0, translateX: isInView ? 0 : -200 }}
-      transition={{ delay: isInView ? 1 : 2, ease: "easeIn", duration: 1 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 1, ease: "easeIn", duration: 1 }}
       ref={ref}
       className="w-full h-[550px] bg-primary-3 text-white flex justify-center items-center "
     >

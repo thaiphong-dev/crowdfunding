@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { CustomFont } from "@/components/common/commonFont";
+import { useInView, motion } from "framer-motion";
 export default function Story() {
   const mockListImg2 = [
     {
@@ -29,45 +31,112 @@ export default function Story() {
       height: 49,
     },
   ];
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { amount: 0.5, once: true });
+
+  const variants = {
+    initial: { opacity: 0 },
+    animate: { opacity: isInView ? 1 : 0 },
+    transition: { delay: 0.5, ease: "anticipate", duration: 1 },
+  };
   return (
-    <div className="space-y-[100px]">
+    <motion.div ref={ref} className="space-y-[100px]">
       <div className="min-h-[620px]">
         <div className="relative">
           <div className="flex space-x-[20px]">
-            <div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isInView ? 1 : 0 }}
+              transition={{ delay: 0.5, ease: "anticipate", duration: 1 }}
+            >
               <Image
                 alt="story img"
                 src="/image/about/storyImg.png"
                 width={560}
                 height={502}
               />
-            </div>
+            </motion.div>
             <div className="w-[620px] p-[20px] space-y-[40px]">
               <div className="space-y-[10px]">
-                <p className={`${CustomFont?.sueFont?.className} sectionTitle`}>
+                <motion.p
+                  initial={{ opacity: 0, scale: 1.2, translateX: 50 }}
+                  animate={{
+                    opacity: isInView ? 1 : 0,
+                    scale: isInView ? 1 : 1.2,
+                    translateX: isInView ? 0 : 50,
+                  }}
+                  transition={{ delay: 0.7, ease: "easeOut", duration: 0.5 }}
+                  className={`${CustomFont?.sueFont?.className} sectionTitle`}
+                >
                   about us
-                </p>
-                <p
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, scale: 1.2, translateX: 50 }}
+                  animate={{
+                    opacity: isInView ? 1 : 0,
+                    scale: isInView ? 1 : 1.2,
+                    translateX: isInView ? 0 : 50,
+                  }}
+                  transition={{ delay: 0.9, ease: "easeOut", duration: 0.5 }}
                   className={`${CustomFont?.shipporiFont?.className} sectionContent w-[494px] `}
                 >
                   Solutions to Help People <br /> in Need and Save <br /> the
                   Planet
-                </p>
-                <p className="text-[20px] text-primary-7">
+                </motion.p>
+                <motion.p
+                  initial={{ opacity: 0, scale: 1.2, translateX: 50 }}
+                  animate={{
+                    opacity: isInView ? 1 : 0,
+                    scale: isInView ? 1 : 1.2,
+                    translateX: isInView ? 0 : 50,
+                  }}
+                  transition={{ delay: 1.1, ease: "easeOut", duration: 0.5 }}
+                  className="text-[20px] text-primary-7"
+                >
                   Lorem Ipsum is simply dummy text of the printin typesetting
                   dummy text ever when an unknown printer took a galley of type
                   and scrambled it to make a type specimen book.
-                </p>
-                <div className="text-[#538582] text-[20px] font-medium bg-[#DEF1F0] text-center w-[600px]">
-                  <p>
+                </motion.p>
+                <motion.div
+                  initial={{ opacity: 0, scale: 1.2, translateX: 50 }}
+                  animate={{
+                    opacity: isInView ? 1 : 0,
+                    scale: isInView ? 1 : 1.2,
+                    translateX: isInView ? 0 : 50,
+                  }}
+                  transition={{ delay: 1.3, ease: "easeOut", duration: 0.5 }}
+                  className="text-[#538582] text-[20px] font-medium bg-[#DEF1F0] text-center w-[600px]"
+                >
+                  <motion.p>
                     Save the Children believes every child deserves a future.
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
               </div>
-              <button className="darkButton">More About</button>
+              <motion.button
+                initial={{ opacity: 0, scale: 1.2, translateX: 200 }}
+                animate={{
+                  opacity: isInView ? 1 : 0,
+                  scale: isInView ? 1 : 1.2,
+                  translateX: isInView ? 0 : 200,
+                }}
+                transition={{ delay: 1.5, ease: "easeOut", duration: 0.5 }}
+                className="darkButton"
+              >
+                More About
+              </motion.button>
             </div>
           </div>
-          <div className="bg-primary-3 text-white flex justify-center items-center w-[455px] h-[170px] space-x-[20px] absolute top-[90%] left-[-5%]">
+          <motion.div
+            initial={{ opacity: 0, scale: 1.2, translateX: -200 }}
+            animate={{
+              opacity: isInView ? 1 : 0,
+              scale: isInView ? 1 : 1.2,
+              translateX: isInView ? 0 : -200,
+            }}
+            transition={{ delay: 1.5, ease: "easeOut", duration: 0.5 }}
+            className="bg-primary-3 text-white flex justify-center items-center w-[455px] h-[170px] space-x-[20px] absolute top-[90%] left-[-5%]"
+          >
             <div className="pt-[10px]">
               <Image
                 alt="qoute icon"
@@ -81,7 +150,7 @@ export default function Story() {
             >
               <p>He is truly great who hath a great charity.</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -96,6 +165,6 @@ export default function Story() {
           />
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

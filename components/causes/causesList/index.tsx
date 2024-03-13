@@ -48,7 +48,7 @@ export default function CauseList() {
   ];
 
   return (
-    <div className="grid grid-cols-2 gap-y-[20px]">
+    <div className="grid grid-cols-2 gap-y-[40px]  gap-x-[40px]">
       {mockData?.map((x, index) => (
         <SingleCause key={index} {...x} />
       ))}

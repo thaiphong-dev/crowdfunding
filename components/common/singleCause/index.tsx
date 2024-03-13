@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
-import React from "react";
+import React, { useRef } from "react";
 import { CustomFont } from "../commonFont";
+import { useInView, motion } from "framer-motion";
 
 interface Props {
   imgURL: string;
@@ -16,9 +18,25 @@ export default function SingleCause({
   goal,
   percent,
 }: Props) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <div className="bg-white w-[584] h-[695px]">
+    <motion.div
+      initial={{ opacity: 0, scale: 1 }}
+      animate={{ opacity: isInView ? 1 : 0 }}
+      transition={{ delay: 0.25, ease: "easeIn", duration: 1 }}
+      ref={ref}
+      className="w-full flex flex-col justify-center items-center"
+    >
+      <motion.div
+        initial={{ scale: 1 }}
+        whileHover={{
+          scale: 1.05,
+          transition: { duration: 0.5 },
+        }}
+        className="bg-white w-[584] h-[695px] cursor-pointer"
+      >
         <div className="relative">
           <Image alt="event img" src={imgURL} width={584} height={387} />
           <div
@@ -59,7 +77,7 @@ export default function SingleCause({
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

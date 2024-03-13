@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { CustomFont } from "../commonFont";
 import { motion } from "framer-motion";
@@ -17,7 +17,7 @@ export default function Index() {
       link: "/donate",
     },
   ];
-
+  const pathName = usePathname();
   const router = useRouter();
   const [isTop, setIsTop] = useState(true);
 
@@ -73,7 +73,9 @@ export default function Index() {
                   ease: "backOut",
                   duration: 1,
                 }}
-                className="cursor-pointer text-[20px]  hover:text-primary-2 hover:font-bold"
+                className={`cursor-pointer text-[20px]  hover:text-primary-2 hover:font-bold ${
+                  pathName?.trim() === item.link ? "!text-primary-2" : ""
+                }`}
                 key={index}
               >
                 <Link href={item.link}>{item.label}</Link>
